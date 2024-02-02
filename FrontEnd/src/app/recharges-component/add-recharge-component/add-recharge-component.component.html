@@ -1,0 +1,70 @@
+<div class="container text-center mt-5">
+  <h3 class="mi-titulo">Recarga telefono</h3>
+</div>
+
+<form (ngSubmit)="onSubmit()" class="mt-4">
+  <table class="table">
+    <tr>
+      <td>
+        <label for="number" class="col-form-label">Numero de telefono:</label>
+      </td>
+      <td>
+        <input maxlength="10" type="text" id="number" name="number" class="form-control" required [(ngModel)]="recharge.number">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="value" style="margin-top: 20px;" class="col-form-label">Valor de la recarga</label>
+      </td>
+      <td>
+        <input name="value" id="value" class="form-control" required [(ngModel)]="recharge.value" >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="operator" class="col-form-label">Operador</label>
+      </td>
+      <td>
+        <select class="grade-label" name="operator" id="lang" required [(ngModel)]="recharge.operator">
+          <option value="TIGO">TIGO</option>
+          <option value="MOVISTAR">MOVISTAR</option>
+          <option value="COMCEL">COMCEL</option>
+          <option value="UFF">UFF</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="typeRecharge" class="col-form-label">Tipo de recarga</label>
+      </td>
+      <td>
+        <select class="grade-label" name="typeRecharge" id="lang" required [(ngModel)]="recharge.typeRecharge">
+          <option value="Paquete de datos">Paquete de datos</option>
+          <option value="Paquete de minutos">Paquete de minutos</option>
+          <option value="Paquete de datos + minutos">Paquete de datos + minutos</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="seller" class="col-form-label">Vendedor</label>
+      </td>
+      <td>
+        <select class="grade-label" name="seller" id="lang" required [(ngModel)]="recharge.seller">
+          <option value="Tania Forero">Tania Forero</option>
+          <option value="Yessica Rojas">Yessica Rojas</option>
+          <option value="Luis Suarez">Luis Suarez</option>
+          <option value="Fermina Daza">Fermina Daza</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-warning me-3"> <i-tabler class="routeIcon" name="square-rounded-plus-filled" matListItemIcon></i-tabler>
+       Agregar</button>
+    <a href="/ui-components/consultar-Recarga" class="btn btn-info"> <i-tabler class="routeIcon" name="arrow-back" matListItemIcon></i-tabler>
+       Lista de recargas</a>
+  </div>
+</form>

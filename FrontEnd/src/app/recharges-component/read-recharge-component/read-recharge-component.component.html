@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Recargas</h3>
+
+    <button (click)="mostrarOcultarFiltro()" class="button-filter">Filtrar</button>
+    <div *ngIf="showFilter" style="margin-bottom: 10px;">
+      <div style="display: inline-block; margin-right: 10px;">
+        <label for="operatorFilter">Operador:</label>
+        <input id="operatorFilter" type="text" [(ngModel)]="filterOperator" style="font-size: 10px; height: 20px; width: 80px;" (input)="applyFilters()" />
+      </div>
+
+      <div style="display: inline-block; margin-right: 10px;">
+        <label for="sellerFilter">Vendedor:</label>
+        <input id="sellerFilter" type="text" [(ngModel)]="filterSeller" style="font-size: 10px; height: 20px; width: 80px;" (input)="applyFilters()" />
+      </div>
+      <button (click)="reset()" class="button-filter2">Limpiar filtro</button>
+    </div>
+
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Numero telefonico</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Operador</th>
+          <th scope="col">Tipo de recarga</th>
+          <th scope="col">Estado de la recarga</th>
+          <th scope="col">Vendedor</th>
+          <th scope="col">Fecha de transaccion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let recharge of filteredRecharges.slice(from, to)">
+          <ng-container *ngIf="recharge">
+            <th scope="row">{{ recharge.idRecharge }}</th>
+            <td>{{ recharge.number }}</td>
+            <td>{{ recharge.value}}</td>
+            <td>{{ recharge.operator }}</td>
+            <td>{{ recharge.typeRecharge }}</td>
+            <td>{{ recharge.estatus }}</td>
+            <td>{{ recharge.seller }}</td>
+            <td>{{ recharge.transactionDate| date:'dd/MM/yyyy HH:mm:ss' }}</td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+    <mat-paginator [length]="filteredRecharges.length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[5, 10, 15]"
+                   (page)="cambiarPagina($event)">
+    </mat-paginator>
+  </div>
+</div>

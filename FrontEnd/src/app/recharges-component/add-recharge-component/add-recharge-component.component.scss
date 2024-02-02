@@ -1,0 +1,88 @@
+.custom-margin {
+  margin-bottom: 25px;
+}
+.mi-titulo{
+  color: rgb(255, 71, 39);
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.select {
+  margin-bottom: 10px;
+  width: 250px;
+  text-align: left;
+  font-family: cursive, sans-serif;
+  outline: 0;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid rgb(193, 191, 191);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.circle-label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+.names {
+  margin-left: -5px;
+}
+
+.professor-label {
+  display: inline-block;
+  top: auto;
+  display: grid;
+  border: 1px solid #ced4da;
+  padding: 8px;
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  align-items: center;
+  color: #495057;
+
+}
+.custom-input {
+  margin-left: 15px;
+}
+
+
+.grade-label {
+  display: inline-block;
+  top: auto;
+  display: grid;
+  border: 1px solid #ced4da;
+  padding: 8px;
+  margin-top: 10px;
+  margin-left: 2px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  width: 200px;
+  height: 35px;
+  align-items: center;
+  color: #495057;
+
+}
+
+
+
+
+
+
+
+td  .left-align {
+  text-align: left !important;
+  font-size: 10px;
+  color: #939393;
+}

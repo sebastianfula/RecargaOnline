@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+/* En tu archivo de estilos global (styles.css o styles.scss) */
+body {
+  background: linear-gradient(to bottom, rgb(244, 255, 183), #fffee1, #ffffff);
+  /*background: linear-gradient(to bottom, #f97afb, #ffbdfc, #fbf7fb);*/
+  margin: 0;
+  height: 100vh;
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s; /* Añade una transición suave de 0.3 segundos al color */
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Cambia el color al pasar el ratón por encima */
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: #372957; /* Cambia el color de fondo al pasar el ratón por encima */
+}
